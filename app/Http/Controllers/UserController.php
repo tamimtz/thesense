@@ -29,6 +29,8 @@ class UserController extends Controller
         $authUser = Auth::user();
         $myPosts = $authUser->posts()->paginate(3);
 
+        
+
         $searchId = Auth::id();
         $searchAnime = 1;
         $searchCommunity = 2;
@@ -54,7 +56,7 @@ class UserController extends Controller
             'labels' => ['Gaming', 'Anime', 'Community', 'Trading', 'Sale'],
             'values' => [$gamingPosts, $animePosts, $communityPosts,$tradingPosts,$salePosts],
         ];
-        return view('user.profile', compact(['user', 'userPosts', 'myPosts', 'chartData']));
+        return view('user.profile', compact(['user', 'userPosts', 'myPosts', 'chartData', ]));
     }
 
     /**
@@ -106,5 +108,44 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function profileView(string $id) {
+
+        $user = User::find($id);
+
+        $userPosts = Post::where('user_id', Auth::id())->count();  
+        $authUser = Auth::user();
+        $myPosts = $authUser->posts()->paginate(3);
+
+        $searchId = Auth::id();
+        $searchAnime = 1;
+        $searchCommunity = 2;
+        $searchGaming = 3;
+        $searchTrading = 4;
+        $searchSale = 5;
+
+        $gamingPosts = Post::where('user_id', $searchId)->where('category',$searchGaming)->get()->count();
+        
+        $animePosts = Post::where('user_id', $searchId)->where('category', $searchAnime)->get()->count();
+        
+        $communityPosts = Post::where('user_id', $searchId)->where('category', $searchCommunity)->get()->count();
+
+        $tradingPosts = Post::where('user_id', $searchId)->where('category', $searchTrading)->get()->count();
+       
+        $salePosts = Post::where('user_id', $searchId)->where('category', $searchSale)->get()->count();
+
+        
+
+
+        
+        $chartData = [
+            'labels' => ['Gaming', 'Anime', 'Community', 'Trading', 'Sale'],
+            'values' => [$gamingPosts, $animePosts, $communityPosts,$tradingPosts,$salePosts],
+        ];
+        
+        
+
+        return view('user.profileView', compact(['user', 'userPosts', 'myPosts', 'chartData']));
     }
 }

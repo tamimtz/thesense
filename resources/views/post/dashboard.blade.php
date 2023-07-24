@@ -8,7 +8,9 @@
        {{ session('msg') }}
     </div>    
     @endif
-
+<div class="container"> 
+  <a href="{{ route('post.create') }}" class="btn btn-danger text-center m-3">Add Post</a>
+</div>
 <table class="table">
     <thead class="thead-dark">
       <tr>

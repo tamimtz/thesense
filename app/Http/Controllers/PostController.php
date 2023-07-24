@@ -25,7 +25,7 @@ class PostController extends Controller
     {
         $user= Auth::user();
 
-        $posts = Post::orderBy('id', 'desc')->paginate(4);
+        $posts = Post::orderBy('id', 'desc')->paginate(20);
 
         
         return view('post.index', compact('user', 'posts'));

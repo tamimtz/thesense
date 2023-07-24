@@ -7,14 +7,7 @@
   <div class="col-sm-3">
     <div class="card">
       <div class="profile_pic">
-        @isset($user->file)
-          
-        <img src="{{url('/storage/'.$user->file)  }}" class="img-fluid " alt="...">
-        @else
-        <img src="{{url('/storage/images/defaultP.jpg')  }}" class="img-fluid" alt="...">
-
-        @endisset
-        
+        <img src="\storage\images\dark.jpg" class="img-fluid " alt="...">
         <h3 class="text-center bg-dark text-light">{{ $user->name}}</h3>
       </div>
     </div>
@@ -23,18 +16,8 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">My Posts: {{ $userPosts }}</h5>
-        <p class="card-text">Using "Sense" for: {{$user->created_at->diffForHumans() }}</p>
-        <div>
-            <p class="showPosts" data-bs-toggle="collapse" href="#collapsePosts">Collapse</button>
-         
-          <div class="collapse" id="collapsePosts">
-            <div >
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
-          
-        </div>
-
-        </div>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <button class="btn btn-success">Collapse</button>
       </div>
     </div>
   </div>

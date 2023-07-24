@@ -1,12 +1,69 @@
+/* NAAAAAAAAAAAAAAAAAVVVVVV*/
+body{
+    padding: 100px;
+}
+.nav-brand{
+    height: 30px;
+    width: 30px;
+}
+
+a.collapseGameNav{
+    color: #1ff0a7;
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+    
+}
+
+.game-span{
+    margin-left: 5px;
+}
+
 div.card.card-custom-background{
     background-image: url('/storage/images/postBackground.jpg');
     color: #010000;
     font-size: 1.2em;
     margin: 5px;
-
     
+   
 
 }
+/* Nav 2 Elements Alighment  */
+
+#collapseGameNav, #collapseAnimeNav {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of items to keep them in a single line */
+    list-style: none; /* Remove the default list-style */
+    display: none; /* Prevent Navbar appearing then disappearing */
+  }
+  
+  .collapseGameNav, .collapseAnimeNav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin as needed to create space between items */
+  }
+  
+  /* Adjust the width and height of the images and spans as per your preference */
+  .nav-brand {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px; /* Adjust the margin as needed to create space between image and text */
+  }
+  
+  .game-span {
+    /* Add styles for the text span if needed */
+  }
+  
+  /* Ensure that the navbar items are in a single row */
+  #collapseGameNav li,
+  #collapseAnimeNav li {
+    display: inline-block;
+    
+  }
+
+
+ 
+ /* Nav 2 Elements Alighment  */ 
 
 .card-custom-background-link{
 
@@ -50,9 +107,7 @@ div.profile_pic{
     
 }
 
-div.jumbotron{
-    
-}
+
 
 a.pills{
     background-color: #1ff0a7;
@@ -128,4 +183,21 @@ div.container.post{
     color: #1ff0a7;
 }
 
+/*include the tag at last  for some reason i guess iam still learning css*/ 
 
+.inline-h5 h5{
+    display: inline;
+
+}
+
+
+/* PROFILE SECTION 
+*****************************************************************************************************************************************************
+
+**********************************************************************************************************************************************************/
+
+
+.profilePic{
+    height: 500px;
+    width: 400px;
+}

@@ -34,4 +34,6 @@ Route::get('/', function(){
     return view('inc.home');
 });
 
+Route::get('/profileView/{pid}', [UserController::class, 'profileView'])->name('user.profileView');
+
 

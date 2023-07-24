@@ -14,9 +14,7 @@
     </div>    
     @endif
     
-    <div class="container"> 
-        <a href="{{ route('post.create') }}" class="btn btn-danger text-center m-3">Add Post</a>
-    </div>
+    
 
     <div class="container posts">
         <div class="row">

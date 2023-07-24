@@ -20,10 +20,14 @@
               {{ $post->title }}
             </div>
             <div class="card-body">
+              <div class="inline-h5">
+                <h5 class="card-title">Author: </h5>
+                <h5> <a href="{{ route('profileView', $post->user_id) }}" class="btn btn-dark">{{ $post->user->name}}</a></h5>
+              </div>
                 
-              <h5 class="card-title">Author: {{ $post->user->name}}</h5>
+              
               <p class="card-text">{{ $post->content }}</p>
-              <a href="{{ route('post.index') }}" class="btn btn-dark">Home</a>
+              <a href="{{ route('user.index') }}" class="btn btn-dark">Home</a>
             </div>
             <div class="card-footer text-muted">
               {{ $post->created_at->diffForHumans() }}
@@ -64,4 +68,13 @@
 
     </div>
 </div>
+
+<div id="app">
+  <example-component></example-component>
+</div>
+
+
+
+
+
 @endsection

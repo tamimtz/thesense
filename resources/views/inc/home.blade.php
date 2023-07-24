@@ -5,7 +5,7 @@
 
 
 
-<div class="jumbotron p-5">
+<div class="jumbotron-fluid p-5">
     <h1 class="jumbo display-4 text-light">Welcome To Your Sense</h1>
     <p class=" jumbo">This is a the Place you belong a Community for gamers and anime enthusiast </p>
     
@@ -32,7 +32,7 @@
     
 </div>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row justify-content-evenly">
     <div class="news-home col-4 ">
       <h3 class="news-jumbo">The International 12 will not have a Battle Pass, but September update promised</h3>
