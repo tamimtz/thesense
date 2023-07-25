@@ -60,7 +60,10 @@
 
                             <div class="list adminPanel">
                                 <ul >
-                                    <li class="list-group-item">Add Quiz</li>
+                                    <a class="admin-panel-lists" href="{{ route('admin.createQuiz') }}">
+                                        <li class="list-group-item" >Add Quiz Question</li>
+                                    </a>
+                                    
                                     <li class="list-group-item">Edit Quiz</li>
                                     <li class="list-group-item">Delet Quiz</li>
                                 </ul>

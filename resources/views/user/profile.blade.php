@@ -30,7 +30,7 @@
          
           <div class="collapse" id="collapsePosts">
             <div >
-              @extends('admin.admin')
+              
             </div>
           
         </div>

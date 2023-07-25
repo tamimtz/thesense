@@ -53,7 +53,18 @@ class User extends Authenticatable
     ];
 
 
-    public function roles() {
-        return $this->belongsToMany(Role::class)->withPivot('user_id', 'role_id');
+    
+
+    public function role() {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function isAdmin() {
+        if ($this->role && $this->role->name == 'admin') {
+
+            return true;
+            # code...
+        }
+        return false;
     }
 }

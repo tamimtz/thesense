@@ -224,3 +224,27 @@ div.container.post{
 .list.adminPanel{
     background-color: none;
 }
+
+a.admin-panel-lists{
+    text-decoration: none;
+    color: #1ff0a7;
+    margin: 10px;
+}
+
+
+/* GENERAL CSS*/
+
+
+h1.title{
+    color: white;
+}
+
+
+
+/*  ADD QUIZ */
+
+div.quiz-form{
+    background-image: url('/storage//images/showPostBg.jpg');
+    color: #1ff0a7;
+    
+}

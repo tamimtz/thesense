@@ -65,7 +65,7 @@
                 @else
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('post.index') }}">Quiz</a>
+                    <a class="nav-link" href="{{ route('quiz.index') }}">Quiz</a>
     
 
                 </li>
@@ -83,6 +83,13 @@
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('user.index') }}">Profile</a>
+                            @auth
+                                 @if(auth()->user()->isAdmin())
+                                     <a class="dropdown-item" href="{{ route('admin.index') }}">Admin Dashboard</a>
+                                 @endif
+                            @endauth
+
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">

@@ -3,22 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class AdminController extends Controller
+class QuizController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-
-    public function __construct () {
-        $this->middleware('IsAdmin');
-    }    
     public function index()
-    {   
-        $totalUsers = User::count();
-        
-        return view('admin.admin', compact(['totalUsers']));
+    {
+        return view('the sense.quiz');
     }
 
     /**
@@ -67,19 +60,5 @@ class AdminController extends Controller
     public function destroy(string $id)
     {
         //
-    }
-
-    public function manageRoles(){
-
-
-
-
-
-        return view('admin.manageRoles');
-    }
-
-    public function createQuiz() {
-
-        return view('admin.createQuiz');
     }
 }

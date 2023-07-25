@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\QuizController;
 use App\Models\Post;
 use App\Models\Role;
 use App\Models\User;
@@ -26,6 +27,7 @@ Auth::routes();
 
 Route::resource('/post', PostController::class);
 Route::resource('/user', UserController::class);
+Route::resource('/quiz', QuizController::class);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -38,6 +40,7 @@ Route::get('/anime', [PostController::class, 'anime'])->name('anime');
 
   
 Route::resource('/admin', AdminController::class);
+Route::get('/createQuiz', [AdminController::class, 'createQuiz'])->name('admin.createQuiz');
 Route::get('/manageRoles', [AdminController::class, 'manageRoles'])->name('manageRoles');
 
 
@@ -50,14 +53,12 @@ Route::get('/', function(){
 Route::get('/profileView/{pid}', [UserController::class, 'profileView'])->name('user.profileView');
 
 
-Route::get('/getToServer', function(){
-    $user = User::find(1);
-    $role = Role::find(1);
+// Route::get('/getToServer', function(){
+//     $user = Auth::user();
 
-    $admin = find($role->id)->pivot->user_id;
-    return $admin;
-    // $role = Role::where('name', 'admin')->first();
-    // $user->roles()->attach($role->id);
-});
+//     if ($user->isAdmin()){
+//         echo "this is admin";
+//     } 
+// });
 
 
