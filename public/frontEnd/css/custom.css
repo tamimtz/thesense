@@ -201,3 +201,26 @@ div.container.post{
     height: 500px;
     width: 400px;
 }
+/* ADMIN PANEL */
+
+.adminPanel{
+    color: #1ff0a7;
+    background-image: url('/storage//images/showPostBg.jpg'); 
+    background-size: auto;
+    
+    
+}
+.adminSettingsImage{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.card.adminPanel{
+    background-color: none;
+    color: #1ff0a7;
+}
+
+.list.adminPanel{
+    background-color: none;
+}
