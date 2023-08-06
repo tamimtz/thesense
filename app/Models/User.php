@@ -30,6 +30,7 @@ class User extends Authenticatable
         'email',
         'password',
         'file',
+        'role_id',
     ];
 
     /**
@@ -64,6 +65,15 @@ class User extends Authenticatable
 
             return true;
             # code...
+        }
+        return false;
+    }
+
+    public function isMod(){
+        if ($this->role && $this->role->name == 'mod'){
+
+            return true;
+
         }
         return false;
     }

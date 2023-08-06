@@ -107,7 +107,12 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+        $user = User::where('id', $id)->first();
+        $userName = $user->name;
+        $user->delete();
+        return redirect()->back()->with('msg', 'user '. $userName. ' has been terminated ');
+       // 
     }
 
     public function profileView(string $id) {

@@ -86,6 +86,9 @@
                             @auth
                                  @if(auth()->user()->isAdmin())
                                      <a class="dropdown-item" href="{{ route('admin.index') }}">Admin Dashboard</a>
+
+                                @elseif(auth()->user()->isMod())
+                                <a class="dropdown-item" href="{{ route('mod.index') }}">Mod Dashboard</a>
                                  @endif
                             @endauth
 

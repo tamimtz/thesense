@@ -20,10 +20,12 @@ a.collapseGameNav{
 }
 
 div.card.card-custom-background{
-    background-image: url('/storage/images/postBackground.jpg');
-    color: #010000;
+    background: #606c88;
+    background: -webkit-linear-gradient(173deg, #606c88 0%, #030303 50%, #000000 100%);
+    background: linear-gradient(173deg, #606c88 0%, #030303 50%, #000000 100%);
     font-size: 1.2em;
     margin: 5px;
+    color: white;
     
    
 
@@ -50,9 +52,7 @@ div.card.card-custom-background{
     margin-right: 5px; /* Adjust the margin as needed to create space between image and text */
   }
   
-  .game-span {
-    /* Add styles for the text span if needed */
-  }
+
   
   /* Ensure that the navbar items are in a single row */
   #collapseGameNav li,
@@ -248,3 +248,9 @@ div.quiz-form{
     color: #1ff0a7;
     
 }
+
+
+/* Manage Roles */
+
+/* Modal */
+

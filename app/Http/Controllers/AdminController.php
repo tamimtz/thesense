@@ -13,6 +13,7 @@ class AdminController extends Controller
 
     public function __construct () {
         $this->middleware('IsAdmin');
+       
     }    
     public function index()
     {   
@@ -72,11 +73,46 @@ class AdminController extends Controller
     public function manageRoles(){
 
 
+        $users = User::all();
+        
 
-
-
-        return view('admin.manageRoles');
+        return view('admin.manageRoles', compact(['users',]));
     }
+
+    public function updateRoles(Request $request, string $id) {
+
+        $role = $request->input('select');
+        $user = User::find($id);
+        
+        try{
+            if($role == 'Admin'){
+                User::where('id', $id)->update(['role_id' => 1]);
+                
+                      
+                
+            }elseif($role == 'Moderator'){
+                        User::where('id', $id)->update(['role_id' => 2]);
+                        
+                        
+            }
+            else{
+                        User::where('id', $id)->update(['role_id' => 0]);
+                        
+                        
+            }
+            return redirect()->back()->with('msg', 'role updated for user '. $user->name);
+            
+        }catch (\Exception $e){
+            return redirect()->back()->with('msg', 'cant find user');
+        }
+        
+
+
+        
+
+    }
+
+  
 
     public function createQuiz() {
 

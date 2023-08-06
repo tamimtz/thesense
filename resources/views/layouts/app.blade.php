@@ -19,6 +19,7 @@
     
     
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="{{ asset('frontEnd/js/jquery-3.7.0.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -32,8 +33,8 @@
 @include('inc.about')
         
     </div>
-    <!--<script src="{{ asset('frontEnd/js/jquery-3.7.0.min.js') }}"></script>
-    <script src="{{ asset('frontEnd/js/bootstrap5.bundle.js') }}"></script>-->
+    
+    <!--<script src="{{ asset('frontEnd/js/bootstrap5.bundle.js') }}"></script>-->
 </body>
 </html>
 

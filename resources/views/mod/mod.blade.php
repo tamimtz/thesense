@@ -6,7 +6,7 @@
 <div class="adminPanel">
     <div class="row">
         <div class="col">
-            <h1 > Admin Panel
+            <h1 > Mod Panel
                 <img class="adminSettingsImage" data-bs-toggle="collapse" href= "#adminPanel" role="button" aria-expanded="false" aria-controls="adminPanel" src="{{ url('/storage/images/adminSettings.png') }}" alt="">
             </h1>
             <div class="row">
@@ -19,9 +19,7 @@
 
                             <div class="list adminPanel">
                                 <ul >
-                                    <a class="admin-panel-lists" href="{{ route('admin.manageRoles') }}">
-                                        <li class="list-group-item" >Manage Roles</li>
-                                    </a>
+                                    
                                     <li class="list-group-item">Ban User
                                         <img class="adminSettingsImage" src="{{ url('/storage/images/ban_user.png') }}" alt="">
                                     </li>
@@ -49,7 +47,7 @@
                                     <li class="list-group-item">Find Post
                                         <img class="adminSettingsImage" src="{{ url('/storage/images/find_post.jpg') }}" alt="">
                                     </li>
-                                    <li class="list-group-item">Delete Post
+                                    <li class="list-group-item">Delete Post 
                                         <img class="adminSettingsImage" src="{{ url('/storage/images/delete_post.gif') }}" alt="">
                                     </li>
                                     <li class="list-group-item">Edit Post
