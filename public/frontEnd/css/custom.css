@@ -231,7 +231,10 @@ a.admin-panel-lists{
     margin: 10px;
 }
 
-
+/** CREATE QUIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ*/
+.quizCreate{
+    color: #1ff0a7;
+}
 /* GENERAL CSS*/
 
 
@@ -246,6 +249,7 @@ h1.title{
 div.quiz-form{
     background-image: url('/storage//images/showPostBg.jpg');
     color: #1ff0a7;
+    height:500px;
     
 }
 

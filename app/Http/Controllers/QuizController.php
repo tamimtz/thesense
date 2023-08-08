@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class QuizController extends Controller
 {
@@ -14,6 +15,29 @@ class QuizController extends Controller
         return view('the sense.quiz');
     }
 
+
+    public function createQuiz2(Request $request){
+
+        $quizForm1 = ([
+            'quiz_name' => $request->input('quiz_name'),
+            'category' => $request->input('category'),
+            'sub_category' => $request->input('sub_category'),
+            'description' => $request->input('description'),
+            'id' => Auth::user(),
+
+        ]);
+        session(['quizForm1Data' => $quizForm1]);
+
+      
+
+        // return redirect()->route('admin.createQuiz2');
+
+        return view('admin.createQuiz2');
+    }
+
+    public function createQuiz3(){
+        return session('quizForm1Data');
+    }
     /**
      * Show the form for creating a new resource.
      */

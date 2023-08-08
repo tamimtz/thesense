@@ -10,6 +10,13 @@
     </h1>
 </div>
 
+@if(session('quizForm1Data'))
+    <h3 class="quizCreate">Adding Quiz </h3>
+    <p class="quizCreate">Title:   {{ session('quizForm1Data')['quiz_name'] }}</p>
+    <p class="quizCreate">Category: {{ session('quizForm1Data')['category'] }}</p>
+
+@endif
+
 <div class="container quiz-form ">
     <form action="{{ route('quiz.createQuiz2') }}" method="POST">
         @method('POST')
