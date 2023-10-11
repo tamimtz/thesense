@@ -22,7 +22,7 @@
             <div class="card-body">
               <div class="inline-h5">
                 <h5 class="card-title">Author: </h5>
-                <h5> <a href="{{ route('profileView', $post->user_id) }}" class="btn btn-dark">{{ $post->user->name}}</a></h5>
+                <h5> <a href="{{ route('user.profileView', $post->user_id) }}" class="btn btn-dark">{{ $post->user->name}}</a></h5>
               </div>
                 
               
@@ -69,9 +69,6 @@
     </div>
 </div>
 
-<div id="app">
-  <example-component></example-component>
-</div>
 
 
 

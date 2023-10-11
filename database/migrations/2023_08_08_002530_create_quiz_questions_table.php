@@ -15,9 +15,16 @@ return new class extends Migration
             $table->id('question_id');
             $table->unsignedBigInteger('quiz_id');
             $table->foreign('quiz_id')->references('quiz_id')->on('quizzes');
-            $table->string('question_text');
+            $table->string('question_title');
             $table->string('image')->nullable();
+            $table->string('option_1');
+            $table->string('option_2');
+            $table->string('option_3');
+            $table->string('option_4');
+            $table->string('answer');
             $table->integer('point');
+            
+           
 
             $table->timestamps();
         });

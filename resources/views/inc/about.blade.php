@@ -1,5 +1,5 @@
 
-<footer>
+<!--<footer>
   <div class="card text-center text-white bg-dark  ">
     
       <div class="card-header">
@@ -25,7 +25,6 @@
       
     </div>
 </footer>
-
-
+-->
 
 

@@ -2,8 +2,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-nav">
     <div class="container ">
         <a class="navbar-brand" href="{{ url('/') }}">
-            The Sense
+            <img src="{{ asset('/storage/images/TheSenseLogo.png') }}" class="logo" alt="">
+            <a href="" class="home-button">
+                The Sense
+            </a>
+            
         </a>
+        
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,6 +54,11 @@
                     <a class="nav-link" href="#">Game Recharge</a>
 
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('quiz.index') }}">Quiz</a>
+    
+
+                </li>
                 
                 <!-- Authentication Links -->
                 @guest
@@ -64,11 +75,7 @@
                     @endif
                 @else
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('quiz.index') }}">Quiz</a>
-    
-
-                </li>
+               
                     
                    
                   

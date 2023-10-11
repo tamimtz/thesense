@@ -11,7 +11,7 @@
 </div>
 
 <div class="container quiz-form ">
-    <form action="{{ route('quiz.createQuiz2') }}" method="POST">
+    <form action="{{ route('quiz.newQuiz') }}" method="POST">
         @method('POST')
         @csrf
         
@@ -36,8 +36,10 @@
 
             <select name="sub_category" class="form-select mt-2" id="quizCategory" aria-label="Default select example">
                 <option selected>Sub Category</option>
-                <option value="anime">Anime</option>
-                <option value="games">Games</option>
+                <option value="anime">dota2</option>
+                <option value="games">valorant</option>
+                <option value="games">dragon ball</option>
+                <option value="games">demon slayer</option>
                 
             </select>
 

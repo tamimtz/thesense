@@ -49,8 +49,9 @@ Route::put('/updateRoles/user/{id}', [AdminController::class, 'updateRoles'])->n
 
 //Routes For Quiz Controller //
 
-Route::post('/createQuiz2', [QuizController::class, 'createQuiz2'])->name('quiz.createQuiz2');
-Route::get('/createQuiz3', [QuizController::class, 'createQuiz3'])->name('quiz.createQuiz3');
+Route::post('/newQuiz', [QuizController::class, 'newQuiz'])->name('quiz.newQuiz');
+Route::post('/createQuestions', [QuizController::class, 'createQuestions'])->name('quiz.createQuestions');
+Route::get('/dota2Quiz', [QuizController::class, 'dota2Quiz'])->name('quiz.dota2Quiz');
 
 
 Route::get('/', function(){

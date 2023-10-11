@@ -9,6 +9,9 @@
 
     <title>The Sense</title>
 
+    <link rel="icon" href="{{ url('/storage/images/TheSenseLogo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/custom.css') }}">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -19,12 +22,13 @@
     
     
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <script src="{{ asset('frontEnd/js/jquery-3.7.0.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
 
 </head>
 <body >
     <div id="app">
+        <script src="{{ asset('frontEnd/js/jquery-3.7.0.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
 @include('inc.nav')
         <main class="py-4">

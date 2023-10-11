@@ -230,7 +230,19 @@ a.admin-panel-lists{
     color: #1ff0a7;
     margin: 10px;
 }
-
+.logo{
+    width: 35px;
+    height: 35px;
+    cursor: none;
+}
+.home-button{
+    color: #1ff0a7;
+    text-decoration: none;
+    font-size: 1.5em;
+    
+    
+    
+}
 /** CREATE QUIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ*/
 .quizCreate{
     color: #1ff0a7;
@@ -239,20 +251,41 @@ a.admin-panel-lists{
 
 
 h1.title{
-    color: white;
+    color:#1ff0a7
 }
+h3.title{
+    color: #1ff0a7;
+    text-align: center;
+    margin-top: 10px;
+}
+p.text{
+    color: #1ff0a7;
+    text-align: center;
+}
+img.quiz-thumb{
 
+   width: 80%;
+   margin-left: 40px;
+    margin-bottom: 20px;
+
+}
 
 
 /*  ADD QUIZ */
 
 div.quiz-form{
+    align-items: center;
     background-image: url('/storage//images/showPostBg.jpg');
+    background-size: cover;
+    background-repeat: none;
     color: #1ff0a7;
-    height:500px;
     
 }
 
+
+a.noDecoration{
+    text-decoration: none;
+}
 
 /* Manage Roles */
 
